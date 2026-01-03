@@ -18,23 +18,17 @@ const Footer = () => {
     <footer className="bg-slate-900 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Footer */}
-        <div className="py-16 grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div className="py-12 sm:py-16 grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand */}
-          <div className="lg:col-span-2">
-            <a href="#home" className="flex items-center gap-3 mb-6">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center shadow-lg">
-                <span className="text-white font-bold text-xl">L</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="font-bold text-lg tracking-tight">
-                  {companyInfo.name}
-                </span>
-                <span className="text-xs text-slate-400">
-                  Quality Tissue Products
-                </span>
-              </div>
+          <div className="sm:col-span-2 lg:col-span-2">
+            <a href="#home" className="inline-block mb-6">
+              <img
+                src={companyInfo.logoDark}
+                alt="LEUWE TISSUE Logo"
+                className="h-20 sm:h-24 w-auto object-contain"
+              />
             </a>
-            <p className="text-slate-400 max-w-md mb-6 leading-relaxed">
+            <p className="text-slate-400 max-w-md mb-6 leading-relaxed text-sm sm:text-base">
               LEUWE TISSUE is South Africa's trusted manufacturer of premium quality 
               tissue products. We deliver excellence in every roll, serving businesses 
               and consumers nationwide.
@@ -67,8 +61,8 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-semibold text-lg mb-6">Quick Links</h4>
-            <ul className="space-y-3">
+            <h4 className="font-semibold text-lg mb-4 sm:mb-6">Quick Links</h4>
+            <ul className="space-y-2 sm:space-y-3">
               {navLinks.map((link) => (
                 <li key={link.name}>
                   <a
@@ -77,7 +71,7 @@ const Footer = () => {
                       e.preventDefault();
                       scrollToSection(link.href);
                     }}
-                    className="text-slate-400 hover:text-teal-400 transition-colors duration-200"
+                    className="text-slate-400 hover:text-teal-400 transition-colors duration-200 text-sm sm:text-base"
                   >
                     {link.name}
                   </a>
@@ -88,23 +82,23 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h4 className="font-semibold text-lg mb-6">Contact</h4>
-            <ul className="space-y-4">
+            <h4 className="font-semibold text-lg mb-4 sm:mb-6">Contact</h4>
+            <ul className="space-y-3 sm:space-y-4">
               <li>
                 <a
                   href={`tel:${companyInfo.phone}`}
-                  className="flex items-center gap-3 text-slate-400 hover:text-teal-400 transition-colors duration-200"
+                  className="flex items-center gap-3 text-slate-400 hover:text-teal-400 transition-colors duration-200 text-sm sm:text-base"
                 >
-                  <Phone className="w-4 h-4" />
+                  <Phone className="w-4 h-4 flex-shrink-0" />
                   {companyInfo.phone}
                 </a>
               </li>
               <li>
                 <a
                   href={`mailto:${companyInfo.email}`}
-                  className="flex items-center gap-3 text-slate-400 hover:text-teal-400 transition-colors duration-200"
+                  className="flex items-center gap-3 text-slate-400 hover:text-teal-400 transition-colors duration-200 text-sm sm:text-base break-all"
                 >
-                  <Mail className="w-4 h-4" />
+                  <Mail className="w-4 h-4 flex-shrink-0" />
                   {companyInfo.email}
                 </a>
               </li>
@@ -113,7 +107,7 @@ const Footer = () => {
                   href={`https://maps.google.com/?q=${encodeURIComponent(companyInfo.address)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-start gap-3 text-slate-400 hover:text-teal-400 transition-colors duration-200"
+                  className="flex items-start gap-3 text-slate-400 hover:text-teal-400 transition-colors duration-200 text-sm sm:text-base"
                 >
                   <MapPin className="w-4 h-4 mt-1 flex-shrink-0" />
                   <span>{companyInfo.address}</span>
@@ -124,15 +118,15 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="py-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-slate-500 text-sm text-center sm:text-left">
+        <div className="py-4 sm:py-6 border-t border-slate-800 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p className="text-slate-500 text-xs sm:text-sm text-center sm:text-left">
             © {new Date().getFullYear()} {companyInfo.name}. All rights reserved.
           </p>
           <button
             onClick={scrollToTop}
             className="flex items-center gap-2 text-slate-400 hover:text-teal-400 transition-colors duration-200"
           >
-            <span className="text-sm">Back to top</span>
+            <span className="text-xs sm:text-sm">Back to top</span>
             <ArrowUp className="w-4 h-4" />
           </button>
         </div>
