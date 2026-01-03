@@ -7,6 +7,9 @@ export const companyInfo = {
   email: "Leuwetissue@gmail.com",
   address: "33 Polly Street, Johannesburg, South Africa",
   whatsapp: "27832174346",
+  logo: "https://customer-assets.emergentagent.com/job_tissue-products-1/artifacts/twk0vcgo_LEUWE%202026-01-03%20at%2011.24.34.jpeg",
+  logoDark: "https://customer-assets.emergentagent.com/job_tissue-products-1/artifacts/6582pg46_LEUWE1%202026-01-03%20at%2011.24.34.jpeg",
+  productImage: "https://customer-assets.emergentagent.com/job_tissue-products-1/artifacts/4hugi9gf_LEUWE%20PIC%202026-01-03%20at%2015.28.53.jpeg",
 };
 
 export const products = [
