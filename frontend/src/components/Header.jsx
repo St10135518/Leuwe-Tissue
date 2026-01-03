@@ -42,21 +42,11 @@ const Header = () => {
             }}
             className="flex items-center gap-3 group"
           >
-            <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-teal-500 to-teal-600 flex items-center justify-center shadow-lg group-hover:shadow-teal-200 transition-shadow duration-300">
-              <span className="text-white font-bold text-xl">L</span>
-            </div>
-            <div className="flex flex-col">
-              <span className={`font-bold text-lg tracking-tight transition-colors duration-300 ${
-                isScrolled ? 'text-slate-800' : 'text-white'
-              }`}>
-                {companyInfo.name}
-              </span>
-              <span className={`text-xs transition-colors duration-300 ${
-                isScrolled ? 'text-slate-500' : 'text-white/70'
-              }`}>
-                Quality Tissue Products
-              </span>
-            </div>
+            <img
+              src={companyInfo.logo}
+              alt="LEUWE TISSUE Logo"
+              className="h-14 sm:h-16 w-auto object-contain"
+            />
           </a>
 
           {/* Desktop Navigation */}
